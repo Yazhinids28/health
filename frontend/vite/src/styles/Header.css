@@ -1,0 +1,128 @@
+.header {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping if needed */
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  background-color: rgba(46, 125, 50, 0.3);
+  color: white;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  height: auto; /* let it adjust */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  box-sizing: border-box;
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 40px;
+  height: 45px;
+  margin-right: 10px;
+  object-fit: contain;
+}
+
+.site-name {
+  font-size: 2rem;
+  font-weight: 700;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links a {
+  margin-left: 25px;
+  text-decoration: none;
+  color: white;
+  font-weight: 300;
+  font-size: 2rem;
+  position: relative;
+  transition: color 0.3s ease;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: white;
+  left: 0;
+  bottom: -4px;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #c8e6c9;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+    padding: 15px 20px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .nav-links a {
+    margin: 8px 0;
+    font-size: 1.5rem;
+  }
+}
+
+.logout-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2rem; /* same size as other links */
+  font-weight: 300;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 0;
+  margin-left: 25px; /* same spacing as other links */
+  position: relative; /* for the underline effect */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  transition: color 0.3s ease; /* smooth color change on hover */
+}
+
+.logout-btn::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: white;
+  left: 0;
+  bottom: -4px;
+  transition: width 0.3s ease;
+}
+
+.logout-btn:hover {
+  color: #c8e6c9;
+}
+
+.logout-btn:hover::after {
+  width: 100%;
+}
+

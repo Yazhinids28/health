@@ -1,0 +1,243 @@
+/* General page styling */
+.siddha-form-title {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  color: #34495e;
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: #98AFC7;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.siddha-form-title span {
+  font-size: 2.5rem;
+  margin-right: 10px;
+}
+
+.siddha-form-title span:hover {
+  transform: rotate(20deg);
+  transition: transform 0.3s ease-in-out;
+}
+
+.siddha-container {
+  background: radial-gradient(circle at 10% 20%, #e1f5f2 0%, transparent 30%),
+              radial-gradient(circle at 80% 10%, #c6ece8 0%, transparent 25%),
+              radial-gradient(circle at 50% 80%, #d4f1f4 0%, transparent 35%),
+              radial-gradient(circle at 90% 70%, #b2dfdb 0%, transparent 30%);
+  background-color: #f7fdfc;
+  min-height: 100vh;
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.siddha-container::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: repeating-radial-gradient(
+    circle at 0 0,
+    rgba(0, 0, 0, 0.03),
+    rgba(0, 0, 0, 0.03) 1px,
+    transparent 1px,
+    transparent 25px
+  );
+  z-index: 0;
+  pointer-events: none;
+}
+
+.siddha-form-card {
+  position: relative;
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+  padding: 2rem;
+  max-width: 800px;
+  margin: auto;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.siddha-form-card:hover {
+  transform: scale(1.01);
+}
+
+.siddha-form-group input[type="number"],
+.siddha-form-group input[type="text"] {
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  background: rgba(255, 255, 255, 0.6);
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
+  transition: all 0.2s;
+}
+
+.siddha-form-group input:focus {
+  border-color: #8bc34a;
+  outline: none;
+  background: #fff;
+}
+
+.siddha-radio-options {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.siddha-radio-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(255, 255, 255, 0.3);
+  padding: 0.4rem 0.8rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.siddha-radio-item:hover {
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.siddha-form-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.siddha-form-group {
+  width: 30%;
+}
+
+.siddha-form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #444;
+  font-size: 14px;
+}
+
+input[type="text"],
+input[type="number"] {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  transition: 0.2s ease;
+  background-color: #fafafa;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+  background-color: #fff;
+}
+
+.siddha-radio-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.siddha-radio-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background-color: #f9fafb;
+  padding: 6px 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.siddha-radio-item:hover {
+  background-color: #eef2ff;
+  border-color: #6366f1;
+}
+
+.siddha-predict-btn {
+  padding: 12px 20px;
+  background-color: #4f46e5;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.siddha-predict-btn:hover {
+  background-color: #4338ca;
+}
+
+.siddha-error-message {
+  color: #ff4d4d;
+  text-align: center;
+  font-weight: 600;
+}
+
+.siddha-live-preview {
+  background-color: #f4f4f4;
+  padding: 10px;
+  margin-top: 20px;
+  border-radius: 8px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.siddha-live-preview ul {
+  list-style: none;
+  padding: 0;
+}
+
+.siddha-live-preview li {
+  margin: 5px 0;
+}
+
+/* Dark mode support */
+.siddha-container.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+.siddha-container.dark-mode input,
+.siddha-container.dark-mode .siddha-radio-item {
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+  border-color: #444;
+}
+
+.siddha-dark-mode-toggle {
+  background: #4f46e5;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 8px;
+  margin: 10px auto;
+  display: block;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.siddha-dark-mode-toggle:hover {
+  background: #4338ca;
+}
+
+.siddha-error-msg {
+  color: #e53935;
+  font-size: 12px;
+  margin-top: 4px;
+}

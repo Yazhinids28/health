@@ -1,0 +1,188 @@
+/* Background with gradient and soft animation */
+body {
+  background: linear-gradient(120deg, #eafaf1, #f8fff6);
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Floating leaves animation */
+@keyframes float {
+  0% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(2deg); }
+  100% { transform: translateY(0) rotate(-1deg); }
+}
+
+.floating-leaf {
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  background: url('https://cdn-icons-png.flaticon.com/512/766/766263.png') no-repeat center;
+  background-size: contain;
+  opacity: 0.06;
+  pointer-events: none;
+  z-index: 0;
+  animation: float 6s ease-in-out infinite;
+}
+
+.floating-leaf.one {
+  top: 8%;
+  left: 5%;
+}
+
+.floating-leaf.two {
+  bottom: 10%;
+  right: 6%;
+  animation-delay: 2s;
+}
+
+.floating-leaf.three {
+  top: 20%;
+  right: 15%;
+  width: 80px;
+  height: 80px;
+  animation-delay: 4s;
+}
+
+/* Container for the form */
+.register-container {
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 50px 40px;
+  border-radius: 24px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1), 0 0 0 4px #d6f6e7;
+  width: 100%;
+  max-width: 420px;
+  margin: 80px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: bounceIn 0.7s ease-out;
+  transition: transform 0.4s ease;
+  z-index: 1;
+}
+
+/* Hover effect for container */
+.register-container:hover {
+  transform: scale(1.02) rotateZ(0.4deg);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.15), 0 0 0 5px #c1f0dc;
+}
+
+/* Bounce-in animation for the form */
+@keyframes bounceIn {
+  0% { transform: scale(0.9) translateY(20px); opacity: 0; }
+  100% { transform: scale(1) translateY(0); opacity: 1; }
+}
+
+/* Form elements */
+.register-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.register-form h2 {
+  color: #2f5d3f;
+  font-size: 28px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 10px;
+  letter-spacing: 0.5px;
+  position: relative;
+}
+
+.register-form h2::before {
+  content: "🌱 ";
+}
+
+.register-form h2::after {
+  content: " 🍃";
+}
+
+/* Input Fields */
+.input-field {
+  padding: 14px 16px;
+  border-radius: 14px;
+  border: 1px solid #cde9db;
+  background-color: #f9fdfb;
+  font-size: 15px;
+  outline: none;
+  transition: 0.3s;
+}
+
+/* Focus effect on input fields */
+.input-field:focus {
+  border-color: #4bb58c;
+  background-color: #ffffff;
+  box-shadow: 0 0 14px rgba(86, 171, 145, 0.3);
+}
+
+/* Submit Button */
+.submit-btn {
+  background: linear-gradient(135deg, #56ab91, #379d82);
+  color: white;
+  border: none;
+  border-radius: 14px;
+  padding: 14px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hover effect for button */
+.submit-btn:hover {
+  background: linear-gradient(135deg, #379d82, #2f7762);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(62, 140, 116, 0.25);
+}
+
+/* Disabled Submit Button */
+.submit-btn:disabled {
+  background-color: #a8d5c5;
+  cursor: not-allowed;
+}
+
+/* Ripple click effect */
+.submit-btn::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: 50%;
+  left: 50%;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.5s ease, height 0.5s ease;
+}
+
+.submit-btn:active::after {
+  width: 200%;
+  height: 200%;
+}
+
+/* Register Link */
+.register-link {
+  margin-top: 18px;
+  font-size: 14px;
+  color: #555;
+  text-align: center;
+}
+
+.register-link a {
+  color: #3e8c74;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* Hover effect for the register link */
+.register-link a:hover {
+  text-decoration: underline;
+  color: #245c48;
+}
+
